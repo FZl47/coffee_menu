@@ -1,0 +1,235 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ shop.title }} | {{ shop.title_en }}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/29.1.0/font-face.min.css"/>
+    <style>
+
+        @font-face {
+            font-family: 'sogand';
+            src: url("/static/fonts/SOGAND/SOGAND.ttf");
+        }
+
+        * {
+            font-family: Vazirmatn;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #2b3446;
+        }
+
+        header {
+            text-align: center;
+            margin: 15px;
+            margin-top: 50px;
+        }
+
+        .shop__title {
+            font-size: 140px;
+            font-family: sogand;
+            color: #fff;
+            border-radius: 20px;
+            width: 450px;
+            margin: auto;
+        }
+
+        .shop__title span {
+            font-family: inherit;
+            position: relative;
+        }
+
+
+        .shop__title span::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: -25%;
+            height: 7px;
+            width: 150%;
+            border: solid 5px #cb1829;
+            border-color: #cb1829 transparent transparent transparent;
+            border-radius: 50%;
+        }
+
+        main {
+            width: 600px;
+            max-width: 100%;
+            text-align: center;
+            margin: auto;
+            padding: 10px;
+        }
+
+
+        .cnt__menu {
+            margin-top: 50px;
+            padding: 10px 25px;
+            border: 2px solid rgba(13, 32, 42, 0.1);
+            box-shadow: 0 5px 30px rgba(25, 45, 56, 0.2);
+            border-radius: 30px;
+        }
+
+
+        .menu__title {
+            text-align: right;
+
+        }
+
+        .menu__title span {
+            font-weight: bold;
+            font-size: 35px;
+            display: inline-block;
+            color: #eee;
+            border-bottom: 4px solid #20ff9c;
+        }
+
+        .menu__content {
+            margin-top: 10px;
+            padding-bottom: 35px;
+        }
+
+        .menu__item {
+            display: block;
+            position: relative;
+            border-bottom: 2px dashed rgba(73, 255, 163, 0.1);
+            padding: 10px 0;
+        }
+
+        .menu__item__header {
+            direction: rtl;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu__item__header img {
+            width: 85px;
+            height: 85px;
+            border-radius: 15px;
+            background: rgba(222, 231, 226, 0.4);
+        }
+
+        .menu__item__title {
+            display: inline-block;
+            font-size: 19px;
+            color: #ddd;
+        }
+
+        .menu__item__content {
+            text-align: right;
+            font-size: 15px;
+            color: #aaa;
+        }
+
+        .menu__item__price {
+            display: inline-block;
+            font-size: 15px;
+            color: #d4ffcd;
+            text-align: left;
+        }
+
+        .shop__title__en {
+            transform: rotate(90deg);
+            font-size: 25px;
+            color: #fff;
+            border: 1px solid #fff;
+            position: fixed;
+            left: -5px;
+            bottom: 40px;
+            padding: 10px;
+            border-radius: 23px;
+        }
+
+        .footer__design{
+            font-style: italic;
+            color: #bebebe;
+            margin-top: 130px;
+            text-align: center;
+        }
+        
+        @media screen and (max-width: 630px) {
+
+            main{
+                width: 90%;
+
+            }
+
+            .shop__title{
+                font-size: 100px;
+                width: 100%;
+            }
+
+            .shop__title__en{
+                bottom: 30px;
+                font-size: 20px;
+                border-radius: 10px;
+            }
+
+            .menu__item{
+                white-space: nowrap;
+                overflow-x: auto;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <p class="shop__title">
+        کافه
+        <span>
+             {{ shop.title }}
+         </span>
+    </p>
+</header>
+<main>
+    <div class="cnt__menu">
+        <p class="menu__title"><span>منو</span></p>
+        <div class="menu__content">
+            {% for item in items %}
+                <div class="menu__item">
+                    <div class="menu__item__header">
+                        <div>
+                            <p class="menu__item__title">
+                                {{ item.title|truncatechars:30 }}
+                            </p>
+                            <p class="menu__item__price">
+                                (<span class="price-el">{{ item.price }}</span>
+                            <span>تومان</span>)
+                            </p>
+                        </div>
+                        <img src="{{ item.get_picture }}" alt="{{ item.title }}">
+                    </div>
+                    <div class="menu__item__content">
+                        {{ item.description }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</main>
+<footer>
+    <p class="shop__title__en">{{ shop.title_en }}</p>
+    <div class="footer__design">
+        Developed with &#x2665;&#xfe0f; by <a style="color: #0ec977" href="https://fzlm.ir">Fazel Momeni</a>
+    </div>
+</footer>
+<script>
+    document.querySelectorAll('.price-el').forEach((el) => {
+        let p = el.innerText
+        el.setAttribute('price-val', p)
+        el.innerHTML = numberWithCommas(p)
+    })
+
+    function numberWithCommas(x) {
+        return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+</script>
+</body>
+</html>
