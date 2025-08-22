@@ -1,245 +1,420 @@
 {% load static %}
-<html>
+<html lang="fa">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>{{ shop.title }} | {{ shop.title_en }}</title>
+    <meta name="description" content="Coffee Menu">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'images/logo.jpg' %}">
+
+    <!-- CSS (Font, Vendor, Icon, Plugins & Style CSS files) -->
+
+    <!-- Fonts -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vazir-font/29.1.0/font-face.min.css"/>
-    <style>
 
-        @font-face {
-            font-family: 'sogand';
-            src: url("/static/fonts/SOGAND/SOGAND.ttf");
-        }
+    <!-- Vendor CSS (Bootstrap & Icon Font) -->
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
 
-        * {
-            font-family: Vazirmatn;
-            margin: 0;
-            padding: 0;
-        }
+    <!-- Icons CSS -->
+    <link rel="stylesheet" href="{% static 'css/plugins/simple-line-icons.min.css' %}">
 
-        body {
-            background: #2b3446;
-        }
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="{% static 'css/plugins/swiper-bundle.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/plugins/ion.rangeslider.min.css' %}">
 
-        header {
-            text-align: center;
-            margin: 15px;
-            margin-top: 50px;
-        }
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-        .shop__title {
-            font-size: 140px;
-            font-family: sogand;
-            color: #fff;
-            border-radius: 20px;
-            width: 450px;
-            margin: auto;
-        }
-
-        .shop__title span {
-            font-family: inherit;
-            position: relative;
-        }
-
-
-        .shop__title span::after {
-            content: "";
-            position: absolute;
-            bottom: -10px;
-            left: -25%;
-            height: 7px;
-            width: 150%;
-            border: solid 5px #cb1829;
-            border-color: #cb1829 transparent transparent transparent;
-            border-radius: 50%;
-        }
-
-        main {
-            width: 600px;
-            max-width: 100%;
-            text-align: center;
-            margin: auto;
-            padding: 10px;
-        }
-
-
-        .cnt__menu {
-            margin-top: 50px;
-            padding: 10px 25px;
-            border: 2px solid rgba(13, 32, 42, 0.1);
-            box-shadow: 0 5px 30px rgba(25, 45, 56, 0.2);
-            border-radius: 30px;
-        }
-
-
-        .menu__title {
-            text-align: right;
-
-        }
-
-        .menu__title span {
-            font-weight: bold;
-            font-size: 35px;
-            display: inline-block;
-            color: #eee;
-            border-bottom: 4px solid #20ff9c;
-        }
-
-        .menu__content {
-            margin-top: 10px;
-            padding-bottom: 35px;
-        }
-
-        .menu__item {
-            display: block;
-            position: relative;
-            border-bottom: 2px dashed rgba(73, 255, 163, 0.1);
-            padding: 10px 0;
-        }
-
-        .menu__item__header {
-            direction: rtl;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .menu__item__header img {
-            width: 85px;
-            height: 85px;
-            border-radius: 15px;
-            background: rgba(222, 231, 226, 0.4);
-        }
-
-        .menu__item__title {
-            display: inline-block;
-            font-size: 19px;
-            color: #ddd;
-        }
-
-        .menu__item__content {
-            text-align: right;
-            font-size: 15px;
-            color: #aaa;
-        }
-
-        .menu__item__price {
-            display: inline-block;
-            font-size: 15px;
-            color: #d4ffcd;
-            text-align: left;
-        }
-
-        .shop__title__en {
-            transform: rotate(90deg);
-            font-size: 25px;
-            color: #fff;
-            border: 1px solid #fff;
-            position: fixed;
-            left: -5px;
-            bottom: 40px;
-            padding: 10px;
-            border-radius: 23px;
-        }
-
-        .footer__design {
-            font-style: italic;
-            color: #bebebe;
-            margin-top: 130px;
-            text-align: center;
-        }
-
-        @media screen and (max-width: 630px) {
-
-            main {
-                width: 90%;
-
-            }
-
-            .shop__title {
-                font-size: 85px;
-                width: 100%;
-            }
-
-            .shop__title__en {
-                bottom: 30px;
-                font-size: 20px;
-                border-radius: 10px;
-            }
-
-            .menu__item {
-                white-space: nowrap;
-                overflow-x: auto;
-            }
-
-            .menu__item__title {
-                font-size: 16px;
-                white-space: nowrap;
-                overflow-x: auto;
-            }
-
-            .menu__item__price {
-                font-size: 13px;
-            }
-
-             .menu__item__header img{
-                 width: 50px;
-                 height: 50px;
-                 border-radius: 10px;
-             }
-
-             .footer__design{
-                 font-size: 12px;
-             }
-        }
-
-    </style>
 </head>
-<body>
-<header>
-    <p class="shop__title">
-        کافه
-        <span>
-             {{ shop.title }}
-         </span>
-    </p>
-</header>
-<main>
-    <div class="cnt__menu">
-        <p class="menu__title"><span>منو</span></p>
-        <div class="menu__content">
-            {% for item in items %}
-                <div class="menu__item">
-                    <div class="menu__item__header">
-                        <div>
-                            <p class="menu__item__title">
-                                {{ item.title|truncatechars:30 }}
-                            </p>
-                            <p class="menu__item__price">
-                                (<span class="price-el">{{ item.price }}</span>
-                                <span>تومان</span>)
-                            </p>
+
+<body dir="rtl" class="theme-icon-when-light">
+
+<div class="header sticky-header section ">
+    <div class="container-fluid">
+        <div class="row align-items-center p-3">
+
+            <!-- Logo Start -->
+            <div class="col-lg-2 col">
+                <div class="header-logo">
+                    <a>
+                        <img src="{% static 'images/logo.jpg' %}" style="width: 100px;height: 100px;border-radius: 50%"
+                             alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- Logo End -->
+
+            <!-- Menu Start -->
+            <div class="col-auto d-block">
+                <nav class="main-menu">
+                    <ul>
+                        <li>
+                            <a href="#menu">منو</a>
+                        </li>
+                        <li>
+                            <a href="#contact">تماس با ما</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <!-- Menu End -->
+
+
+        </div>
+    </div>
+</div>
+
+<!-- Slider Section Start -->
+<div class="h2-hero-section section d-none">
+    <div class="hero-slider hero-slider-2">
+
+        <div>
+            <div class="bg-dark">
+                <div class="container">
+                    <div class="p-5">
+                        <h5 class="hero-slide-2-sub-title">کافی شاپ</h5>
+                        <h2 class="hero-slide-2-title">
+                            {{ shop.title }}
+                            <br>
+                            {{ shop.title_en }}
+                        </h2>
+                        <div class="hero-slide-2-button">
+                            <a href="#menu" class="btn btn-primary btn-dark-hover">
+                                مشاهده منو
+                                <i class="sli-basket-loaded"></i></a>
                         </div>
-                        <img src="{{ item.get_picture }}" alt="{{ item.title }}">
                     </div>
-                    <div class="menu__item__content">
-                        {{ item.description }}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<!-- Slider Section End -->
+
+<!-- About Section Start -->
+<div class="h2-about-section section section-padding">
+    <div class="container">
+        <div class="row row-cols-lg-2 row-cols-1 flex-lg-row-reverse align-items-center mb-n6">
+
+            <div class="col mb-6">
+                <img loading="lazy" src="{% static 'images/about-us.png' %}" alt="about us image" width="560"
+                     height="472">
+            </div>
+
+            <div class="col mb-6">
+                <div class="about-us-content">
+                    <span class="sub-title">Coffee Shop#</span>
+                    <h2 class="title">{{ shop.title }}</h2>
+
+                    <a href="#menu" class="btn btn-dark btn-primary-hover">مشاهده منو</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- About Section End -->
+
+<!-- Feature Section Start -->
+<div class="h2-feature-section section section-padding pt-0 d-none">
+    <div class="container">
+        <div class="section-title section-title-center">
+            <p class="title">What Happens Here</p>
+            <h2 class="sub-title">EXPLORE KOFI SERVICE</h2>
+
+        </div>
+        <div class="row row-cols-lg-3 row-cols-sm-2 row-cols-1 mb-n6">
+
+            <div class="col mb-6">
+                <div class="feature-2">
+                    <div class="feature-icon"><img loading="lazy" src="assets/images/feature/two/feature-1.png"
+                                                   alt="Coffee World sorts" width="80" height="80"></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Coffee World sorts</h3>
+                        <p class="feature-text">This is the perfect place to find a nice and cozy spot to sip some.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-6">
+                <div class="feature-2">
+                    <div class="feature-icon"><img loading="lazy" src="assets/images/feature/two/feature-2.png"
+                                                   alt="Sed sagittis sodales" width="80" height="80"></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Sed sagittis sodales</h3>
+                        <p class="feature-text">Coffee Bean and more shops right in this website.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-6">
+                <div class="feature-2">
+                    <div class="feature-icon"><img loading="lazy" src="assets/images/feature/two/feature-3.png"
+                                                   alt="Curabitur in eleifend" width="80" height="80"></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Curabitur in eleifend</h3>
+                        <p class="feature-text">Find the Java Jungle, Coffee Bean and more shops right in this
+                            website.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-6">
+                <div class="feature-2">
+                    <div class="feature-icon"><img loading="lazy" src="assets/images/feature/two/feature-4.png"
+                                                   alt="Eleifend vehicula odio." width="80" height="80"></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Eleifend vehicula odio.</h3>
+                        <p class="feature-text">Perfect place to find a nice and some more shops right in this
+                            website.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-6">
+                <div class="feature-2">
+                    <div class="feature-icon"><img loading="lazy" src="assets/images/feature/two/feature-5.png"
+                                                   alt="The best World sorts" width="80" height="80"></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">The best World sorts</h3>
+                        <p class="feature-text">The perfect place to find a nice and cozy spot to sip some. You'll find
+                            the Java.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col mb-6">
+                <div class="feature-2">
+                    <div class="feature-icon"><img loading="lazy" src="assets/images/feature/two/feature-6.png"
+                                                   alt="Sodales lobortis sorts" width="80" height="80"></div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Sodales lobortis sorts</h3>
+                        <p class="feature-text">Sed sagittis sodales lobortis. Curabitur in eleifend turpis, id vehicula
+                            odio.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Feature Section End -->
+
+<!-- Coffee Menu Section Start -->
+{% if populars %}
+    <div class="h2-coffee-menu-section  section section-padding pt-0">
+        <div class="container">
+            <div class="section-title section-title-center">
+                <h2 class="sub-title">پرطرفدارترین ها</h2>
+
+            </div>
+            <div class="row row-cols-1 mb-n8">
+
+                <div class="col-lg-8 mx-auto col mb-8" dir="ltr">
+                    <div class="row row-cols-1 mb-n6">
+                        {% for popular in populars %}
+                            <div class="col mb-6">
+                                <div class="coffee-menu">
+                                    <a class="coffee-menu-thumb"><img loading="lazy"
+                                                                      src="{{ popular.get_picture }}"
+                                                                      alt="     {{ popular.title }}"
+                                                                      width="85" height="85"></a>
+
+                                    <span class="coffee-menu-price">
+                                        <span class="price-el">{{ popular.price }}</span>
+                                        <span style="font-size: 14px;margin-top: 4px;">
+                                            تومان
+                                        </span>
+                                    </span>
+                                    <div class="coffee-menu-content d-block"
+                                         style="margin-right: 0;margin-left: auto;text-align: right">
+                                        <h3 class="coffee-menu-title">
+                                            {{ popular.title }}
+                                        </h3>
+                                        <p>{{ popular.description }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+{% endif %}
+<!-- Coffee Menu Section End -->
+
+<!-- Product Section Start -->
+<div class="h2-product-section section section-padding pt-0" id="menu">
+    <div class="container">
+        <div class="section-title section-title-center">
+            <h2 class="sub-title">منو</h2>
+        </div>
+
+        <div class="nav product-tab-nav justify-content-center">
+
+            {% for category in categories %}
+                <button class="{% if forloop.first %}active{% endif %}" data-bs-toggle="tab"
+                        data-bs-target="#{{ category.name }}" style="font-size: 22px">
+                    {{ category.name }}
+                    <img src="{{ category.get_picture }}" alt="{{ category.name }}"
+                         style="width: 40px;height: 40px;object-fit: cover">
+                </button>
+            {% endfor %}
+
+        </div>
+        <div class="tab-content" dir="ltr" style="height: 350px">
+            {% for category in categories %}
+                <div class="tab-pane fade show {% if forloop.first %}active{% endif %}" id="{{ category.name }}">
+                    <div class="product-carousel swiper">
+                        <div class="swiper-wrapper">
+                            {% for item in category.get_items %}
+                                <div class="swiper-slide" dir="rtl">
+                                    <div class="product">
+                                        <div class="product-thumb">
+                                            <a class="product-image"><img loading="lazy"
+                                                                          style="width: 80%;height: 220px;object-fit: cover;margin: auto;display:block;"
+                                                                          src="{{ item.get_picture }}"
+                                                                          alt="{{ item.title }}"
+                                            ></a>
+
+
+                                            {% if item.is_popular %}
+                                                <div class="product-badge-left">
+                                                    <span class="product-badge-new">پرطرفدار</span>
+                                                </div>
+
+                                            {% endif %}
+
+                                        </div>
+                                        <div class="product-content">
+                                            <h5 class="product-title"
+                                                style="margin:0 ;font-size: 20px;margin-top: -10px;border-top: 1px solid #eee;font-weight: bold">
+                                                {{ item.title }}
+                                            </h5>
+                                            <span style="font-size: 15px;color: #4f4f4f;margin: 8px auto">{{ item.description }}</span>
+                                            <div class="product-price d-block mt-2">
+                                                <span class="price-el d-block">{{ item.price }}</span>
+                                                <span class="d-block" style="font-size: 16px">
+                                                    تومان
+                                                </span>
+                                            </div>
+                                            <div class="product-rating">
+                                                <span class="product-rating-bg"><span class="product-rating-active"
+                                                                                      style="width: 90%;"></span></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                        <div class="swiper-pagination d-md-none"></div>
+                        <div class="swiper-button-prev d-none d-md-flex"></div>
+                        <div class="swiper-button-next d-none d-md-flex"></div>
                     </div>
                 </div>
             {% endfor %}
         </div>
+
     </div>
-</main>
-<footer>
-    <p class="shop__title__en">{{ shop.title_en }}</p>
-    <div class="footer__design">
-        Developed with &#x2665;&#xfe0f; by <a style="color: #0ec977" href="https://fzlm.ir">Fazel Momeni</a>
+</div>
+<!-- Product Section End -->
+
+
+<!-- Footer Section Start -->
+<div class="footer-2-section section mt-5">
+    <!-- Footer Top Section Start -->
+    <div class="footer-top section">
+        <div class="container">
+            <div class="row">
+
+                <!-- Footer Widget Start -->
+                <div class="col-lg-7 col-12 mx-auto" id="contact">
+                    <div class="footer-widget">
+
+                        <div class="footer-widget-about text-center mb-4">
+
+                            <img loading="lazy" src="{% static 'images/logo.jpg' %}"
+                                 style="width: 150px;height: 150px;border-radius: 50%;object-fit: cover" alt="site logo"
+                                 width="198"
+                                 height="70">
+                            {% if shop.location %}
+                                <p>
+                                    <i class="sli-location-pin text-danger"></i>:
+                                    {{ shop.location }}
+                                </p>
+                            {% endif %}
+                        </div>
+
+
+                        <div class="footer-widget-social justify-content-center">
+                            {% if shop.phone %}
+                                <a href="tel:{{ shop.phone }}"><i class="sli-phone"></i></a>
+                            {% endif %}
+
+                            {% if shop.instagram %}
+                                <a href="{{ shop.instagram }}"><i class="sli-social-instagram"></i></a>
+                            {% endif %}
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Footer Widget End -->
+
+            </div>
+        </div>
     </div>
-</footer>
+    <!-- Footer Top Section End -->
+
+    <!-- Footer Bottom Section Start -->
+    <div class="footer-bottom section">
+        <div class="container">
+            <div class="row justify-content-between align-items-center mb-n2">
+
+                <!-- Footer Widget Start -->
+                <div class="col-md-auto col-12 mb-2">
+                    <p class="footer-copyright text-center">Copyright <b class="text-primary">
+                        <a href="https://fzlm.ir">Made by Fazel Momeni</a>
+                    </b> | &copy;2025</p>
+                </div>
+                <!-- Footer Widget End -->
+
+            </div>
+        </div>
+    </div>
+    <!-- Footer Bottom Section End -->
+
+</div>
+<!-- Footer Section End -->
+
+<button class="scroll-to-top"><i class="sli-arrow-up"></i></button>
+
+<!-- JS Vendor, Plugins & Activation Script Files -->
+
+<!-- Vendors JS -->
+<script src="{% static 'js\vendor\modernizr-3.11.7.min.js' %}"></script>
+<script src="{% static 'js\vendor\jquery-3.6.0.min.js' %}"></script>
+<script src="{% static 'js\vendor\jquery-migrate-3.3.2.min.js' %}"></script>
+<script src="{% static 'js\vendor\bootstrap.bundle.min.js' %}"></script>
+
+<!-- Plugins JS -->
+{#<script src="{% static 'js\plugins\swiper-bundle.min.js' %}"></script>#}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.3/swiper-bundle.min.js"></script>
+
+
+<script src="{% static 'js\plugins\jquery.countdown.min.js' %}"></script>
+<script src="{% static 'js\plugins\svg-inject.min.js' %}"></script>
+<script src="{% static 'js\plugins\jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js\plugins\ion.rangeslider.min.js' %}"></script>
+<script src="{% static 'js\plugins\jquery.zoom.min.js' %}"></script>
+<script src="{% static 'js\plugins\resize-sensor.js' %}"></script>
+<script src="{% static 'js\plugins\jquery.sticky-sidebar.min.js' %}"></script>
+
+<!-- Activation JS -->
+<script src="{% static 'js\active.js' %}"></script>
+
 <script>
     document.querySelectorAll('.price-el').forEach((el) => {
         let p = el.innerText
@@ -251,5 +426,7 @@
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
 </script>
+
 </body>
+
 </html>

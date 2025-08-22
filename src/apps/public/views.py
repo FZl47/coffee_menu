@@ -10,6 +10,8 @@ class Index(TemplateView):
         context = super().get_context_data(**kwargs)
         context.update({
             'shop': models.Shop.objects.first(),
-            'items': models.MenuItem.objects.all()
+            'items': models.MenuItem.objects.all(),
+            'populars': models.MenuItem.objects.filter(is_popular=True),
+            'categories': models.Category.objects.all()
         })
         return context
