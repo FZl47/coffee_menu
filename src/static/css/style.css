@@ -33,6 +33,7 @@
 *::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    font-family: Vazirmatn;
 }
 
 html,
@@ -6014,4 +6015,13 @@ textarea.form-field:focus {
     .about-us-content .title {
         font-size: 90px;
     }
+}
+
+
+.category-items{
+    width: 90%;
+    display: block;
+    margin: 10px auto;
+    white-space: nowrap;
+    overflow-x: auto;
 }

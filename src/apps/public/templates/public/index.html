@@ -255,14 +255,16 @@
 
         <div class="nav product-tab-nav justify-content-center">
 
-            {% for category in categories %}
-                <button class="{% if forloop.first %}active{% endif %}" data-bs-toggle="tab"
-                        data-bs-target="#{{ category.name }}" style="font-size: 22px">
-                    {{ category.name }}
-                    <img src="{{ category.get_picture }}" alt="{{ category.name }}"
-                         style="width: 40px;height: 40px;object-fit: cover">
-                </button>
-            {% endfor %}
+            <div class="category-items">
+                {% for category in categories %}
+                    <button class="{% if forloop.first %}active{% endif %}" data-bs-toggle="tab"
+                            data-bs-target="#{{ category.name }}" style="font-size: 22px">
+                        {{ category.name }}
+                        <img src="{{ category.get_picture }}" alt="{{ category.name }}"
+                             style="width: 40px;height: 40px;object-fit: cover">
+                    </button>
+                {% endfor %}
+            </div>
 
         </div>
         <div class="tab-content" dir="ltr" style="height: 350px">
