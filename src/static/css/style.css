@@ -33,13 +33,14 @@
 *::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    font-family: Vazirmatn;
+    font-family: Vazir;
 }
 
 html,
 body {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 
@@ -49,7 +50,7 @@ body {
 }
 
 body {
-    font-family: Vazirmatn, "Open Sans", sans-serif;
+    font-family: Vazir, "Open Sans", sans-serif;
     font-size: 1rem;
     font-weight: 400;
     font-style: normal;
@@ -69,7 +70,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-weight: 500;
     line-height: 1.25;
     margin-top: 0;
@@ -1912,7 +1913,7 @@ hr {
 }
 
 .hero-slide-1-sub-title {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 15px;
@@ -2134,7 +2135,7 @@ hr {
 }
 
 .hero-slide-2-sub-title {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-size: 24px;
     font-weight: 400;
     margin-bottom: 15px;
@@ -2754,7 +2755,7 @@ hr {
 }
 
 .product-tab-nav button {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-size: 14px;
     font-weight: 500;
     line-height: 1;
@@ -2832,7 +2833,7 @@ hr {
 }
 
 .product-deal-countdown .countdown-item .number {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-size: 36px;
     line-height: 1;
 }
@@ -3199,7 +3200,7 @@ hr {
 }
 
 .product-countdown .countdown-item span.number {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-size: 16px;
     font-weight: 700;
 }
@@ -3246,7 +3247,7 @@ hr {
     line-height: 1.5;
     margin-bottom: 10px;
     color: #1F2226;
-    font-family: Vazirmatn;
+    font-family: Vazir;
 }
 
 .product-excerpt {
@@ -4666,7 +4667,7 @@ hr {
 
 /* Shop Sidebar Toggle */
 .shop-sidebar-toggle {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
@@ -5119,7 +5120,7 @@ hr {
 }
 
 .single-blog-tags span {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-weight: 500;
 }
 
@@ -5152,7 +5153,7 @@ hr {
 }
 
 .single-blog-share span {
-    font-family: Vazirmatn;
+    font-family: Vazir;
     font-weight: 500;
 }
 
@@ -6018,7 +6019,7 @@ textarea.form-field:focus {
 }
 
 
-.category-items{
+.category-items {
     width: 90%;
     display: block;
     margin: 10px auto;
