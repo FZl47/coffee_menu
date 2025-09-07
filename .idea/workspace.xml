@@ -5,38 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f4791f78-4864-4dbc-95c7-a7154683185c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/apps/public/migrations/0009_shop_time.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/images/menu/categories/Untitled-Project-49.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/media/images/menu/items/پشت_پا_دستگاه.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/static/images/footer.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/static/images/others/backstage.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/apps/public/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/public/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/public/templates/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/public/templates/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/css/plugins/ion.rangeslider.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/css/plugins/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/css/plugins/simple-line-icons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/css/plugins/swiper-bundle.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/fonts/SOGAND.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/fonts/simple-line-icons/simple-line-icons.eot@v=2.4.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/fonts/simple-line-icons/simple-line-icons.svg@v=2.4.0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/fonts/simple-line-icons/simple-line-icons.ttf@v=2.4.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/fonts/simple-line-icons/simple-line-icons.woff2@v=2.4.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/fonts/simple-line-icons/simple-line-icons.woff@v=2.4.0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/active.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/ion.rangeslider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/jquery.countdown.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/jquery.sticky-sidebar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/jquery.zoom.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/resize-sensor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/svg-inject.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/plugins/swiper-bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/vendor/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/vendor/jquery-3.6.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/vendor/jquery-migrate-3.3.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/static/js/vendor/modernizr-3.11.7.min.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +98,7 @@
       <workItem from="1755913496733" duration="213000" />
       <workItem from="1757142311520" duration="4296000" />
       <workItem from="1757171187753" duration="4747000" />
-      <workItem from="1757235049269" duration="5299000" />
+      <workItem from="1757235049269" duration="5757000" />
     </task>
     <servers />
   </component>
