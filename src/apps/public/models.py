@@ -5,6 +5,7 @@ class Shop(models.Model):
     title = models.CharField(max_length=100)
     title_en = models.CharField(max_length=100)
     location = models.TextField(null=True, blank=True)
+    time = models.CharField(max_length=200, null=True, blank=True)
     phone = models.CharField(max_length=30, null=True, blank=True)
     instagram = models.CharField(max_length=100, null=True, blank=True)
 

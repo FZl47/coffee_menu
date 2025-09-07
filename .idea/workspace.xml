@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f4791f78-4864-4dbc-95c7-a7154683185c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/apps/public/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/public/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/apps/public/templates/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/apps/public/templates/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/static/css/style.css" afterDir="false" />
     </list>
@@ -37,6 +38,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
@@ -94,7 +96,11 @@
       <workItem from="1744989087615" duration="43000" />
       <workItem from="1755803971402" duration="5199000" />
       <workItem from="1755824576267" duration="6104000" />
-      <workItem from="1755893826938" duration="512000" />
+      <workItem from="1755893826938" duration="663000" />
+      <workItem from="1755913496733" duration="213000" />
+      <workItem from="1757142311520" duration="4296000" />
+      <workItem from="1757171187753" duration="4747000" />
+      <workItem from="1757235049269" duration="4619000" />
     </task>
     <servers />
   </component>
